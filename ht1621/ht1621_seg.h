@@ -1,0 +1,67 @@
+#ifndef _LCD_DEFINE_H_
+#define _LCD_DEFINE_H_
+
+#define SEG1 0x01
+#define SEG2 0x02
+#define SEG3 0x04
+#define SEG4 0x08
+#define SEG5 0x10
+#define SEG6 0x20
+#define SEG7 0x40
+#define SEG8 0x80
+
+#define SEGA SEG8
+#define SEGB SEG4
+#define SEGC SEG2
+#define SEGD SEG5
+#define SEGE SEG6
+#define SEGF SEG7
+#define SEGG SEG3
+
+#define NUM0 (SEGA|SEGB|SEGC|SEGD|SEGE|SEGF)
+#define NUM1 (SEGB|SEGC)
+#define NUM2 (SEGA|SEGB|SEGD|SEGE|SEGG)
+#define NUM3 (SEGA|SEGB|SEGC|SEGD|SEGG)
+#define NUM4 (SEGB|SEGC|SEGF|SEGG)
+#define NUM5 (SEGA|SEGC|SEGD|SEGF|SEGG)
+#define NUM6 (SEGA|SEGC|SEGD|SEGE|SEGF|SEGG)
+#define NUM7 (SEGA|SEGB|SEGC)
+#define NUM8 (SEGA|SEGB|SEGC|SEGD|SEGE|SEGF|SEGG)
+#define NUM9 (SEGA|SEGB|SEGC|SEGD|SEGF|SEGG)
+#define NUMA (SEGA|SEGB|SEGC|SEGE|SEGF|SEGG)
+#define NUMB (SEGC|SEGD|SEGE|SEGF|SEGG)
+#define NUMC (SEGA|SEGD|SEGE|SEGF)
+#define NUMD (SEGB|SEGC|SEGD|SEGE|SEGG)
+#define NUME (SEGA|SEGD|SEGE|SEGF|SEGG)
+#define NUMF (SEGA|SEGE|SEGF|SEGG)
+#define FLAGG (SEGG)
+
+uint8_t g_chArraySeg0[20]={NUM0,NUM1,NUM2,NUM3,NUM4,NUM5,NUM6,NUM7,NUM8,NUM9,NUMA,NUMB,NUMC,NUMD,NUME,NUMF,FLAGG};
+
+#undef SEGA
+#undef SEGB
+#undef SEGC
+#undef SEGD
+#undef SEGE
+#undef SEGF
+#undef SEGG
+
+#define SEGA SEG5
+#define SEGB SEG1
+#define SEGC SEG3
+#define SEGD SEG8
+#define SEGE SEG7
+#define SEGF SEG6
+#define SEGG SEG2
+
+uint8_t g_chArraySeg1[20]={NUM0,NUM1,NUM2,NUM3,NUM4,NUM5,NUM6,NUM7,NUM8,NUM9,NUMA,NUMB,NUMC,NUMD,NUME,NUMF,FLAGG};
+
+#undef SEGA
+#undef SEGB
+#undef SEGC
+#undef SEGD
+#undef SEGE
+#undef SEGF
+#undef SEGG
+
+#endif
